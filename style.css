@@ -21,9 +21,20 @@ h1 {
 
 input#ph {
   width: 300px;
-  padding: 10px 10px;
+  max-width: 90%;
+  padding: 12px 15px;
   border: none;
   border-radius: 15px;
+  transition: 0.3s;
+}
+
+input#ph:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+input#ph:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3);
 }
 
 /* 1. O CONTAINER: Ele faz os livros ficarem lado a lado */
