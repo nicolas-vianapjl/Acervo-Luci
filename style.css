@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(to right, #4facfe, #049da5);
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  margin: 20px;
+}
+
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #dbe3ea;
+  margin-bottom: 20px;
+  font-size: 3.0rem;
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+input#ph {
+  width: 300px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* 1. O CONTAINER: Ele faz os livros ficarem lado a lado */
+.container-acervo {
+  display: flex;
+  flex-wrap: wrap; /* Se não couber, pula linha */
+  justify-content: center;
+  gap: 20px; /* Espaço entre os livros */
+  padding: 20px;
+  width: 100%;
+}
+
+/* 2. O CARD: Estilo que vale para TODOS os livros */
+.livro-card {
+    background-color: white;
+    width: 250px;           /* Largura fixa para os cards */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: 0.3s;
+    
+    /* MÁGICA AQUI */
+    display: flex;
+    flex-direction: column; /* Alinha os itens em pé */
+    min-height: 450px;      /* Define uma altura mínima igual para todos */
+}
+
+/* 3. O EFEITO: Agora funciona em todos porque todos são .livro-card */
+.livro-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.livro-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.livro-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;           /* Faz essa parte ocupar todo o espaço sobrando */
+    justify-content: space-between; /* Empurra o botão para o final */
+    align-items: center;    /* Centraliza o texto e botão */
+}
+
+/* Ajuste no botão para ele aparecer melhor */
+button {
+    background-color: #ac0d9f;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;     /* Espaçamento interno fixo */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80%;             /* Deixa todos os botões com a mesma largura */
+    margin-top: auto;       /* Garante que ele "pouse" no fundo */
+}
