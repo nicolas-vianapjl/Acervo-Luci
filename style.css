@@ -19,22 +19,73 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+/* Container da barra de busca com animação */
+#pp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 input#ph {
   width: 300px;
   max-width: 90%;
-  padding: 12px 15px;
+  padding: 12px 15px 12px 40px;
   border: none;
   border-radius: 15px;
   transition: 0.3s;
+  background-color: white;
 }
 
 input#ph:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 input#ph:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3);
+  animation: pulsoFoco 0.6s ease-out;
+}
+
+/* Ícone de busca com animação */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  color: #049da5;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input#ph:focus ~ .search-icon,
+input#ph:not(:placeholder-shown) ~ .search-icon {
+  animation: rotacaoBusca 0.8s ease-in-out;
+}
+
+/* Animação de rotação do ícone */
+@keyframes rotacaoBusca {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-15deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Animação de pulso no foco */
+@keyframes pulsoFoco {
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(79, 172, 254, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3);
+  }
 }
 
 /* 1. O CONTAINER: Ele faz os livros ficarem lado a lado */
@@ -92,6 +143,38 @@ button {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    width: 80%;             /* Deixa todos os botões com a mesma largura */
-    margin-top: auto;       /* Garante que ele "pouse" no fundo */
+    font-weight: 500;
+    width: 80%;
+    margin-top: auto;
+    transition: all 0.5s ease;
+    box-shadow: 0 2px 8px rgba(172, 13, 159, 0.3);
+}
+
+button:hover {
+    background-color: #8a0a7f;
+    box-shadow: 0 4px 12px rgba(172, 13, 159, 0.5);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(172, 13, 159, 0.3);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(172, 13, 159, 0.2), 0 2px 8px rgba(172, 13, 159, 0.3);
+}
+
+/* Estilo para os links dos botões */
+.livro-info a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.livro-info a button {
+    margin-top: 0;
 }
