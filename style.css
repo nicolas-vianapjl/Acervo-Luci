@@ -115,6 +115,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   gap: 30px;
   padding-top: 20px;
   border-top: 2px solid #f0f0f0;
+  justify-content: center;
 }
 
 .filter-group,
@@ -124,6 +125,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   gap: 10px;
   flex: 1;
   min-width: 250px;
+  align-items: center;
 }
 
 .filter-group label,
@@ -137,6 +139,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .filter-btn {

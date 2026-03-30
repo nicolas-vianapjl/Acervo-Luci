@@ -2,14 +2,12 @@
 const barraBusca = document.getElementById('ph');
 const booksContainer = document.getElementById('books-container');
 const filterBtns = document.querySelectorAll('.filter-btn');
-const sortSelect = document.getElementById('sort-select');
 const resultsCount = document.getElementById('results-count');
 const favoritesToggle = document.querySelector('.favorites-btn');
 const notification = document.getElementById('notification');
 
 // ==================== DADOS ====================
 let currentFilter = 'all';
-let currentSort = 'recent';
 let showingFavoritesOnly = false;
 const books = document.querySelectorAll('.livro-card');
 
@@ -107,39 +105,7 @@ function filterByCategory(e) {
   renderBooks();
 }
 
-// ==================== ORDENAÇÃO ====================
-sortSelect.addEventListener('change', (e) => {
-  currentSort = e.target.value;
-  renderBooks();
-});
 
-function sortBooks(booksArray) {
-  const sorted = [...booksArray];
-
-  switch (currentSort) {
-    case 'titulo-az':
-      sorted.sort((a, b) =>
-        a.dataset.titulo.localeCompare(b.dataset.titulo, 'pt-BR')
-      );
-      break;
-    case 'titulo-za':
-      sorted.sort((a, b) =>
-        b.dataset.titulo.localeCompare(a.dataset.titulo, 'pt-BR')
-      );
-      break;
-    case 'autor-az':
-      sorted.sort((a, b) =>
-        a.dataset.autor.localeCompare(b.dataset.autor, 'pt-BR')
-      );
-      break;
-    case 'recent':
-    default:
-      // Mantém a ordem original
-      break;
-  }
-
-  return sorted;
-}
 
 // ==================== RENDERIZAR LIVROS ====================
 function renderBooks() {
@@ -151,9 +117,6 @@ function renderBooks() {
 
     return categoryMatch && favoritesMatch;
   });
-
-  // Aplicar ordenação
-  visibleBooks = sortBooks(visibleBooks);
 
   // Atualizar visibilidade
   books.forEach(book => {
