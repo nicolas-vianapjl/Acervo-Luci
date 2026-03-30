@@ -569,3 +569,30 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
 .hidden {
   display: none !important;
 }
+
+/* Faz com que o conteúdo do header fique em linha */
+.header-content {
+  display: flex;
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Centraliza o bloco todo na tela */
+  gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+/* Ajusta o tamanho da imagem da escola */
+.logo-escola {
+  height: 80px; /* Ajuste a altura conforme necessário */
+  width: auto;  /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Opcional: arredonda os cantos */
+}
+
+/* Garante que o texto fique empilhado (Título em cima, subtítulo embaixo) */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o texto à esquerda em relação ao logo */
+}
+
+/* Remove margens padrão que podem desalinhá-los */
+.header-text h1, .header-text p {
+  margin: 0;
+}
