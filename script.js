@@ -186,23 +186,25 @@ function renderBooks() {
 barraBusca.addEventListener('input', (e) => {
   const termoBusca = e.target.value.toLowerCase().trim();
 
-  books.forEach(book => {
+  let visibleBooks = Array.from(books).filter(book => {
     const titulo = book.dataset.titulo.toLowerCase();
     const autor = book.dataset.autor.toLowerCase();
+    const categoryMatch =
+      currentFilter === 'all' || book.dataset.category === currentFilter;
+    const favoritesMatch =
+      !showingFavoritesOnly || book.classList.contains('favorited');
+    const searchMatch = termoBusca === '' || titulo.includes(termoBusca) || autor.includes(termoBusca);
 
-    const matches = titulo.includes(termoBusca) || autor.includes(termoBusca);
+    return categoryMatch && favoritesMatch && searchMatch;
+  });
 
-    if (termoBusca === '' || matches) {
-      const categoryMatch =
-        currentFilter === 'all' || book.dataset.category === currentFilter;
-      const favoritesMatch =
-        !showingFavoritesOnly || book.classList.contains('favorited');
+  // Aplicar ordenação
+  visibleBooks = sortBooks(visibleBooks);
 
-      if (categoryMatch && favoritesMatch) {
-        book.style.display = 'flex';
-      } else {
-        book.style.display = 'none';
-      }
+  // Atualizar visibilidade
+  books.forEach(book => {
+    if (visibleBooks.includes(book)) {
+      book.style.display = 'flex';
     } else {
       book.style.display = 'none';
     }
@@ -211,10 +213,6 @@ barraBusca.addEventListener('input', (e) => {
   // Mensagem sem resultados
   const msgAnterior = document.getElementById('sem-resultados');
   if (msgAnterior) msgAnterior.remove();
-
-  const visibleBooks = Array.from(books).filter(
-    book => book.style.display !== 'none'
-  );
 
   if (visibleBooks.length === 0 && termoBusca !== '') {
     const msg = document.createElement('p');
