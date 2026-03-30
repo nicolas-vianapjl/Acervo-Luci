@@ -209,6 +209,11 @@ function updateResultsCount(count) {
   resultsCount.textContent = `${count} ${count === 1 ? 'livro' : 'livros'}`;
 }
 
+// ==================== ORDENAR LIVROS ====================
+function sortBooks(booksToSort) {
+  return booksToSort;
+}
+
 // ==================== NOTIFICAÇÃO ====================
 function showNotification(message) {
   notification.textContent = message;
