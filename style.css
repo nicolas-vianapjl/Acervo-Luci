@@ -12,10 +12,15 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px;
   color: #333;
+}
+
+.page-wrapper {
+  flex: 1;
+  padding: 20px;
 }
 
 main#main-content {
@@ -23,14 +28,14 @@ main#main-content {
 }
 
 footer {
-  margin-top: 25px;
+  width: 100%;
+  margin-top: auto;
   text-align: center;
-  padding: 18px 16px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.96);
   color: #444;
   font-weight: 600;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* HEADER */
