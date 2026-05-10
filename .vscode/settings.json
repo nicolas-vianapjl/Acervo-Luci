@@ -1,1 +1,8 @@
-{}
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /workspaces/Acervo-Luci && git add \\. && git commit -m 'Ajusta estilo do rodapé para visual anterior' && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
