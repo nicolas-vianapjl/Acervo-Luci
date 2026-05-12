@@ -3,7 +3,7 @@ const barraBusca = document.getElementById('ph');
 const booksContainer = document.getElementById('books-container');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const resultsCount = document.getElementById('results-count');
-const favoritesToggle = document.querySelector('.favorites-btn');
+const favoritesToggle = document.getElementById('favorites-toggle') || document.querySelector('.favorites-btn');
 const notification = document.getElementById('notification');
 
 // ==================== DADOS ====================
@@ -161,8 +161,9 @@ barraBusca.addEventListener('input', (e) => {
     return categoryMatch && favoritesMatch && searchMatch;
   });
 
-  // Aplicar ordenação
-  visibleBooks = sortBooks(visibleBooks);
+  // Aplicar ordenação (não existe sortBooks no código atual)
+  // visibleBooks = sortBooks(visibleBooks);
+
 
   // Atualizar visibilidade
   books.forEach(book => {
@@ -209,11 +210,6 @@ function updateResultsCount(count) {
   resultsCount.textContent = `${count} ${count === 1 ? 'livro' : 'livros'}`;
 }
 
-// ==================== ORDENAR LIVROS ====================
-function sortBooks(booksToSort) {
-  return booksToSort;
-}
-
 // ==================== NOTIFICAÇÃO ====================
 function showNotification(message) {
   notification.textContent = message;
@@ -229,6 +225,7 @@ function setupEventListeners() {
   // Botões de favorito
   books.forEach(book => {
     const btn = book.querySelector('.favorite-btn');
+    if (!btn) return;
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();

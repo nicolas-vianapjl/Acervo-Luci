@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #333;
 }
@@ -31,7 +31,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 18px 20px;
-  background: #ffffff;
+  background: linear-gradient(to right, #9f74d7, #7e1dde);
   color: #444;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -48,14 +48,16 @@ footer {
 
 .footer-wrapper p {
   margin: 0;
-  font-size: 0.95rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #333;
+  color: #0a0a0a;
 }
 
 .footer-wrapper span {
   font-size: 0.9rem;
-  color: #666;
+  font-family: cursive;
+  color: #0a0a0a;
 }
 
 /* HEADER */
@@ -70,15 +72,21 @@ header {
 }
 
 .header-content h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
-  color: #667eea;
   margin-bottom: 10px;
   letter-spacing: 2px;
+  background: linear-gradient(to right, #7c19be, #aa73bd); 
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
 }
 
 .subtitle {
-  color: #666;
+  color: #100f0f;
   font-size: 1.1rem;
   font-weight: 300;
 }
@@ -112,7 +120,7 @@ input#ph {
   border: 2px solid #e0e0e0;
   border-radius: 15px;
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
   background-color: #f8f9ff;
 }
@@ -194,7 +202,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   border-radius: 20px;
   background: white;
   color: #666;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -219,7 +227,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   border: 2px solid #e0e0e0;
   border-radius: 10px;
   background: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -259,7 +267,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   border-radius: 15px;
   background: white;
   color: #ff6b6b;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -422,7 +430,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   border-radius: 10px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -630,7 +638,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
 /* Ajusta o tamanho da imagem da escola */
 .logo-escola {
   height: 80px; /* Ajuste a altura conforme necessário */
-  width: auto;  /* Mantém a proporção da imagem */
+  width: auto; /* Mantém a proporção da imagem */
   border-radius: 8px; /* Opcional: arredonda os cantos */
 }
 
@@ -642,6 +650,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
 }
 
 /* Remove margens padrão que podem desalinhá-los */
-.header-text h1, .header-text p {
+.header-text h1,
+.header-text p {
   margin: 0;
 }
