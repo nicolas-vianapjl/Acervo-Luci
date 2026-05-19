@@ -116,7 +116,19 @@ canvas {
 
   .seta {
     font-size: 45px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    z-index: 10;
+  }
+
+  .esquerda {
     left: 10px;
+  }
+
+  .direita {
     right: 10px;
   }
 
