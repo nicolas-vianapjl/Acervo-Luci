@@ -72,3 +72,58 @@ canvas {
   border-radius: 25px;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .leitor {
+    padding: 10px;
+  }
+
+  .topo {
+    padding: 16px;
+  }
+
+  .topo span {
+    display: block;
+    font-size: 12px;
+  }
+
+  .topo h2 {
+    font-size: 1.3rem;
+  }
+
+  .livro {
+    width: 90vw;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 14px;
+  }
+
+  .seta {
+    font-size: 50px;
+  }
+
+  .contador {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .livro {
+    width: 100%;
+    margin: 18px auto;
+  }
+
+  .seta {
+    font-size: 45px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .contador {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}

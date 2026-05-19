@@ -508,6 +508,16 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
     font-size: 2rem;
   }
 
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-text {
+    align-items: center;
+  }
+
   #search-filters-container {
     padding: 20px;
   }
@@ -566,12 +576,21 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
     border-radius: 15px;
   }
 
+  .header-content {
+    justify-content: center;
+  }
+
   .header-content h1 {
     font-size: 1.5rem;
   }
 
   .subtitle {
     font-size: 0.95rem;
+  }
+
+  .header-text {
+    align-items: center;
+    text-align: center;
   }
 
   #search-filters-container {
@@ -594,12 +613,12 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   }
 
   .container-acervo {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
   .livro-card img {
-    height: 200px;
+    height: 180px;
   }
 
   .category-badge {
@@ -633,6 +652,9 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   align-items: center; /* Alinha verticalmente ao centro */
   justify-content: center; /* Centraliza o bloco todo na tela */
   gap: 20px; /* Espaço entre a imagem e o texto */
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 /* Ajusta o tamanho da imagem da escola */
