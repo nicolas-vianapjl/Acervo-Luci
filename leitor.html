@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitor</title>
+  <link rel="stylesheet" href="leitor.css">
+</head>
+<body>
+
+  <div class="leitor">
+
+    <div class="topo">
+      <span>VOCÊ ESTÁ LENDO:</span>
+      <h2 id="tituloLivro">Carregando...</h2>
+    </div>
+
+    <button class="seta esquerda" onclick="voltarPagina()">‹</button>
+
+    <div class="livro">
+      <canvas id="pdfCanvas"></canvas>
+    </div>
+
+    <button class="seta direita" onclick="proximaPagina()">›</button>
+
+    <div class="contador">
+      <span id="paginaAtual">1</span>/<span id="totalPaginas">0</span>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="leitor.js"></script>
+</body>
+</html>
