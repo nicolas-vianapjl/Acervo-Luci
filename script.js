@@ -79,7 +79,10 @@ function renderCategories() {
     'biografia': '🎭 Biografia',
     'poesia': '✨ Poesia',
     'filosofia': '🤔 Filosofia',
-    'contemporâneo': '🌟 Contemporâneo'
+    'contemporâneo': '🌟 Contemporâneo',
+    'ficção': '🧙Ficção',
+    'conto': '💭Conto',
+    'biografia': '📚Biografia'
   };
 
   sortedCategories.forEach(category => {
