@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(to left, #d0d2db 0%, #ad78e2 100%);
   color: #333;
 }
 
@@ -31,7 +31,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 18px 20px;
-  background: linear-gradient(to right, #9f74d7, #7e1dde);
+  background: linear-gradient(to left, #d0d2db 0%, #ad78e2 100%);
   color: #444;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -55,16 +55,16 @@ footer {
 }
 
 .footer-wrapper span {
-  font-size: 0.9rem;
+  font-size: 0.9rem;  
   font-family: cursive;
   color: #0a0a0a;
 }
 
-/* HEADER */
+/* HEADER */  
 header {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 40px 20px;
+  background: linear-gradient(to top, #d0d2db 0%, #ad78e2 100%);
+  border-radius: 5px;
+  padding: 30px 20px;
   margin-bottom: 40px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -76,7 +76,7 @@ header {
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 10px;
   letter-spacing: 2px;
-  background: linear-gradient(to right, #7c19be, #aa73bd); 
+  background: linear-gradient(to right, #7c19be, #9f40bf); 
   -webkit-background-clip: text;
   background-clip: text;
 
@@ -99,7 +99,7 @@ header {
 
 /* SEARCH E FILTERS CONTAINER */
 #search-filters-container {
-  background: rgba(255, 255, 255, 0.98);
+  background: linear-gradient(to bottom,#d0d2db 0%, #ad78e2 100%);
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 30px;
@@ -195,7 +195,6 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   gap: 10px;
   justify-content: center;
 }
-
 .filter-btn {
   padding: 8px 16px;
   border: 2px solid #e0e0e0;
@@ -375,7 +374,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8896d4 0%, #d352d7 100%);
   color: white;
   padding: 6px 12px;
   border-radius: 20px;
@@ -428,7 +427,7 @@ input#ph:not(:placeholder-shown) ~ .search-icon {
   padding: 12px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(to left, #e3a3e3, #c16bd9 100%);
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
