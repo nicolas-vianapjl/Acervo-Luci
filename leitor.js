@@ -50,19 +50,19 @@ const livros = {
   "funerais-mamae-grande": {
     titulo: "Os funerais da Mamãe Grande",
     autor: "Gabriel García Márquez",
-    arquivo: "pdfs/funerais-mamae-grande.pdf"
+    arquivo: "pdfs/Os-Funerais-da-Mamãe-Grande.pdf"
   },
 
   "opusculo-humanitario": {
     titulo: "Opúsculo Humanitário",
     autor: "Nísia Floresta",
-    arquivo: "pdfs/opusculo-humanitario.pdf"
+    arquivo: "pdfs/Opusculo_humanitario_3.ed.pdf"
   },
 
   "nebulosas": {
     titulo: "Nebulosas",
     autor: "Narcisa Amália",
-    arquivo: "pdfs/nebulosas.pdf"
+    arquivo: "pdfs/nebulosas-narcisa-amalia.pdf"
   },
 
   "memorias-de-martha": {
